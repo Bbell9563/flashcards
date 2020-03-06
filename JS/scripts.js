@@ -32,6 +32,7 @@ function editAll(){
   addBtn.style.display = "block"
   doneBtn.style.display = "block"
   exitBtn.style.display = "block"
+  startBtn.style.display = "none"
   cardShow.innerHTML = ""
   cardsArray.forEach((e, i) => {
     cardShow.innerHTML += 
@@ -67,6 +68,7 @@ function updateAll(){
 }
 
 function exitEdit(){
+  startBtn = "block"
   doneBtn.style.display = "none"
   addBtn.style.display = "none"
   editBtn.style.display = "block"
@@ -76,6 +78,7 @@ function exitEdit(){
 function showCards(){
   exitBtn.style.display = "none"
   endBtn.style.display = "none"
+  startBtn.style.display = "block"
   cardShow.innerHTML = ""
   cardsArray.forEach((e, i) => {
     cardShow.innerHTML += `<div  id = "card" onclick = "flipCard(${i})">
