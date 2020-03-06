@@ -1,16 +1,27 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" type ="text/css" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  </head>
   <body>
-    <div id= "newForm">
+    <div class= container>
+      <h3 class = "button" id= "editButton">Edit</h3>
+      <h3 class = "button"  id= "exitButton">Exit</h3>
+      <h3  class = "button" id= "doneButton">Save</h3>
+    </div>
+
+
+    <!-- <div id= "newForm">
       <form id=frm>
         <label for= "question" >Question</label>
-        <input id= "question" type="text" name="question" value= "">
-        <label for="anwer">Answer</label>
-        <input id= "answer" type="text" name="answer" value= "">
+        <input class= "inputField" id= "question" type="text" name="question" value= "">
+        <label for="answer">Answer</label>
+        <input class= "inputField" id= "answer" type="text" name="answer" value= "">
       </form>
-      <button onclick="createNewCard()">Create Card</button>
-    </div>
+      <button class = button onclick="createNewCard()">Create Card</button>
+    </div> -->
     <div id="cardHolder"></div>
+    <div class = container><h3  class = "button" id= "addButton">Add</h3></div>
 
     <script src="../Js/scripts.js"></script>
   </body>

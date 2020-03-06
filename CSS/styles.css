@@ -1,1 +1,65 @@
 
+*{
+  margin: 10px 10px 0 10px;
+  font-family: "Righteous";
+}
+html{
+  background-color: #6f84a6;
+}
+
+#questionAndAnswer{
+  margin: 20px;
+}
+
+#doneButton{
+  display: none;
+}
+
+#exitButton{
+  display: none;
+}
+#addButton{
+  display:none;
+}
+.container {
+  display: flex;
+  justify-content: left;
+}
+.button {
+  padding: 10px 20px;
+  background-color: #999;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #222;
+  border: none;
+  font-size: 20px;
+  color:white;
+}
+
+.button:hover {
+  background-color: #666;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.inputField{
+  border: none;
+  border-bottom: 2px solid #222;
+  background-color: #6f84a6;
+  width: 25%;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+#card{
+  background-color: whitesmoke;
+  padding: 30px 50px;
+  border-radius: 40px;
+  box-shadow: 10px 10px 10px #222;
+  text-align: center;
+  margin: 30px 0 ;
+}
+
+#card:hover{
+  transform: scale(1.01);
+}
