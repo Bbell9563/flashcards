@@ -53,10 +53,10 @@ function deleteCard(i){
 
 function flipCard(i){
   var card = document.getElementById(`q${i}`)
-  if(card.innerHTML == cardsArray[i].question){
-    card.innerHTML = cardsArray[i].answer
+  if(card.innerHTML == `${cardsArray[i].question}?`){
+    card.innerHTML = `<h4>Answer: ${cardsArray[i].answer}</h4>`
   }
-  else{card.innerHTML = cardsArray[i].question;}
+  else{card.innerHTML = `${cardsArray[i].question}?`}
 }
 
 function updateAll(){
@@ -68,7 +68,7 @@ function updateAll(){
 }
 
 function exitEdit(){
-  startBtn = "block"
+  startBtn.style.display = "block"
   doneBtn.style.display = "none"
   addBtn.style.display = "none"
   editBtn.style.display = "block"
@@ -82,7 +82,7 @@ function showCards(){
   cardShow.innerHTML = ""
   cardsArray.forEach((e, i) => {
     cardShow.innerHTML += `<div  id = "card" onclick = "flipCard(${i})">
-                            <h1  id = "q${i}">${cardsArray[i].question}</h1>
+                            <h1  id = "q${i}">${cardsArray[i].question}?</h1>
                           </div>`
   })
 }
@@ -92,7 +92,7 @@ function showOne(){
   endBtn.style.display = "block"
   cardShow.innerHTML = `
   <div class =" oneCard" id = "card" onclick = "flipCard(0)">
-    <h1  id = "q0">${cardsArray[0].question}</h1>
+    <h1  id = "q0">${cardsArray[0].question}?</h1>
   </div>
   <div class = switchCardsButton>
     <h3 class = "button disabled"><</h3>
@@ -106,7 +106,7 @@ function nextCard(index){
     newIndex += 1
     cardShow.innerHTML = `
     <div class =" oneCard" id = "card" onclick = "flipCard(${newIndex})">
-      <h1  id = "q${newIndex}">${cardsArray[newIndex].question}</h1>
+      <h1  id = "q${newIndex}">${cardsArray[newIndex].question}?</h1>
     </div>
     <div class = switchCardsButton>
       <h3 onclick="backCard(${newIndex})" class = "button"><</h3>
@@ -117,7 +117,7 @@ function nextCard(index){
   newIndex+=  1
   cardShow.innerHTML = `
   <div  class =" oneCard" id = "card" onclick = "flipCard(${newIndex})">
-    <h1  id = "q${newIndex}">${cardsArray[newIndex].question}</h1>
+    <h1  id = "q${newIndex}">${cardsArray[newIndex].question}?</h1>
   </div>
   <div class = switchCardsButton>
     <h3 onclick="backCard(${newIndex})" class = "button"><</h3>
@@ -131,7 +131,7 @@ function backCard(index){
   else{
   cardShow.innerHTML = `
   <div class =" oneCard" id = "card" onclick = "flipCard(${oldIndex})">
-    <h1  id = "q${oldIndex}">${cardsArray[oldIndex].question}</h1>
+    <h1  id = "q${oldIndex}">${cardsArray[oldIndex].question}?</h1>
   </div>
   <div class = switchCardsButton>
     <h3 onclick="backCard(${oldIndex})" class = "button"><</h3>
