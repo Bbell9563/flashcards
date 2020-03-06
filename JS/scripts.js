@@ -11,7 +11,6 @@ var newFrm = document.getElementById("newForm")
 var cardShow = document.getElementById("cardHolder")
 var exitBtn = document.getElementById("exitButton")
 var addBtn = document.getElementById("addButton")
-var cardFlip = document.getElementById("card")
 
 var card1 = new Card("What is 1+1", "2")
 var card2 = new Card("How to tie your shoes", "you just don't")
@@ -22,7 +21,6 @@ editBtn.addEventListener("click", editAll)
 doneBtn.addEventListener("click", updateAll)
 exitBtn.addEventListener("click", exitEdit)
 addBtn.addEventListener("click", createNewCard)
-// cardFlip.addEventListener("click", flipCard)
 
 function editAll(){
   editBtn.style.display = "none"
@@ -41,7 +39,19 @@ function editAll(){
   })
 }
 
-function flipCard()
+function flipCard(index){
+  var card = document.getElementById(`q${index}`)
+  console.log(card.innerHTML)
+  console.log(cardsArray[index].question)
+
+  if(card.innerHTML == cardsArray[index].question){
+    console.log("i know now")
+    card.innerHTML = cardsArray[index].answer
+  }
+  else{card.innerHTML = cardsArray[index].question;}
+
+
+  }
 
 function updateAll(){
   cardsArray.forEach((element, index)=>{
@@ -62,8 +72,8 @@ function showCards(arr){
   exitBtn.style.display = "none"
   cardShow.innerHTML = ""
   arr.forEach((element, index) => {
-    cardShow.innerHTML += `<div  id = "card">
-                              <h1 id = q${index}> ${element.question}</h1>
+    cardShow.innerHTML += `<div  id = "card" onclick = "flipCard(${index})">
+                              <h1  id = "q${index}">${cardsArray[index].question}</h1>
                             </div>`
   })
 }
