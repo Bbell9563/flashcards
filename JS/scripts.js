@@ -35,17 +35,20 @@ function editAll(){
         <input class= "inputField" type="text" name="question" id = "question${index}" value="${element.question}">
         <label>Answer:</label>
         <input class= "inputField" type="text" name="answer" id = "answer${index}" value="${element.answer}">
+        <h1 class = "button" id= "delete${index}" onclick = "deleteCard(${index})">Delete This Question</h1>
       </div>`
   })
 }
 
+function deleteCard (i){
+  cardsArray.splice(i,1)
+  editAll()
+
+}
+
 function flipCard(index){
   var card = document.getElementById(`q${index}`)
-  console.log(card.innerHTML)
-  console.log(cardsArray[index].question)
-
   if(card.innerHTML == cardsArray[index].question){
-    console.log("i know now")
     card.innerHTML = cardsArray[index].answer
   }
   else{card.innerHTML = cardsArray[index].question;}
