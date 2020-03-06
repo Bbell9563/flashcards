@@ -3,24 +3,16 @@
   margin: 10px 10px 0 10px;
   font-family: "Righteous";
 }
-html{
-  background-color: #6f84a6;
-}
+html{background-color: #6f84a6;}
 
-#questionAndAnswer{
-  margin: 20px;
-}
+#questionAndAnswer{margin: 20px;}
 
-#doneButton{
-  display: none;
-}
+#doneButton{display: none;}
 
-#exitButton{
-  display: none;
-}
-#addButton{
-  display:none;
-}
+#exitButton{display: none;}
+
+#addButton{display:none;}
+
 .container {
   display: flex;
   justify-content: left;

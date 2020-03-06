@@ -7,20 +7,18 @@ class Card {
 
 var editBtn = document.getElementById("editButton")
 var doneBtn = document.getElementById("doneButton")
-var newFrm = document.getElementById("newForm")
 var cardShow = document.getElementById("cardHolder")
 var exitBtn = document.getElementById("exitButton")
 var addBtn = document.getElementById("addButton")
-
-var card1 = new Card("What is 1+1", "2")
-var card2 = new Card("How to tie your shoes", "you just don't")
-var cardsArray = [card1, card2]
-showCards(cardsArray)
-
 editBtn.addEventListener("click", editAll)
 doneBtn.addEventListener("click", updateAll)
 exitBtn.addEventListener("click", exitEdit)
 addBtn.addEventListener("click", createNewCard)
+
+var card1 = new Card("What is 1+1", "2")
+var card2 = new Card("How to tie your shoes", "you just don't")
+var cardsArray = [card1, card2]
+
 
 function editAll(){
   editBtn.style.display = "none"
@@ -43,7 +41,6 @@ function editAll(){
 function deleteCard (i){
   cardsArray.splice(i,1)
   editAll()
-
 }
 
 function flipCard(index){
@@ -52,8 +49,6 @@ function flipCard(index){
     card.innerHTML = cardsArray[index].answer
   }
   else{card.innerHTML = cardsArray[index].question;}
-
-
   }
 
 function updateAll(){
@@ -80,10 +75,6 @@ function showCards(arr){
                             </div>`
   })
 }
-
-                              // <h1 id = a${index}> Answer:${element.answer}</h1>
-
-
 
 function createNewCard(){
   let q = ""
