@@ -71,7 +71,6 @@ function exitEdit(){
   startBtn.style.display = "block"
   doneBtn.style.display = "none"
   addBtn.style.display = "none"
-  editBtn.style.display = "block"
   showCards()
 }
 
@@ -79,6 +78,7 @@ function showCards(){
   exitBtn.style.display = "none"
   endBtn.style.display = "none"
   startBtn.style.display = "block"
+  editBtn.style.display = "block"
   cardShow.innerHTML = ""
   cardsArray.forEach((e, i) => {
     cardShow.innerHTML += `<div  id = "card" onclick = "flipCard(${i})">
@@ -88,6 +88,7 @@ function showCards(){
 }
 
 function showOne(){
+  editBtn.style.display = "none"
   startBtn.style.display = "none"
   endBtn.style.display = "block"
   cardShow.innerHTML = `
