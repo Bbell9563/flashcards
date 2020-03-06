@@ -13,6 +13,8 @@ html{background-color: #6f84a6;}
 
 #addButton{display:none;}
 
+#endButton{display:none;}
+
 .container {
   display: flex;
   justify-content: left;
@@ -31,6 +33,15 @@ html{background-color: #6f84a6;}
   background-color: #666;
   transform: scale(1.02);
   cursor: pointer;
+}
+
+.disabled{
+  background-color: #666;
+  color: #999;
+}
+.disabled:hover{
+  transform: none;
+  cursor: not-allowed;
 }
 
 .inputField{
@@ -55,4 +66,13 @@ html{background-color: #6f84a6;}
 #card:hover{
   transform: scale(1.01);
   cursor: pointer;
+}
+
+.switchCardsButton{
+  display:flex;
+  justify-content: space-around;
+}
+
+.oneCard{
+  height: 200px;
 }
